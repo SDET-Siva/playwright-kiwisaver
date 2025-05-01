@@ -3,7 +3,7 @@ import { Page, Locator, expect } from '@playwright/test';
 export class KiwisaverCalculatorPage {
   readonly page: Page;
 
-  // 🔍 Locators (similar to @FindBy)
+  // Locators
   readonly openCalculatorButton: Locator;
   readonly currentAgeInput: Locator;
   readonly nextQuestionButtons: Locator;
@@ -20,7 +20,7 @@ export class KiwisaverCalculatorPage {
   constructor(page: Page) {
     this.page = page;
 
-    // ✅ Locator Initializations
+    // Locator Initializations
     this.openCalculatorButton = page.getByRole('button', { name: /Open the calculator/i });
     this.currentAgeInput = page.getByLabel('Current age');
     this.nextQuestionButtons = page.getByText('Next Question', { exact: true });
